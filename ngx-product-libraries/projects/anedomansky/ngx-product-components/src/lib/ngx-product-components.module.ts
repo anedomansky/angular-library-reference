@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
-import { NgxProductComponentsComponent } from './ngx-product-components.component';
+import { TariffCreateComponent } from './tariff-create/tariff-create.component';
 
-
+import { NgxCommonComponentsModule } from '@anedomansky/ngx-common-components';
 
 @NgModule({
-  declarations: [
-    NgxProductComponentsComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    NgxProductComponentsComponent
-  ]
+  declarations: [TariffCreateComponent],
+  imports: [NgxCommonComponentsModule],
+  exports: [TariffCreateComponent],
 })
-export class NgxProductComponentsModule { }
+export class NgxProductComponentsModule {}

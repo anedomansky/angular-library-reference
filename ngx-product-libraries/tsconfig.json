@@ -5,6 +5,9 @@
     "paths": {
       "@anedomansky/ngx-product-components": [
         "dist/anedomansky/ngx-product-components"
+      ],
+      "@anedomansky/ngx-common-components": [ // needed in order to point to the latest version
+        "./node_modules/@anedomansky/ngx-common-components"
       ]
     },
     "baseUrl": "./",

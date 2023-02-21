@@ -1,0 +1,10 @@
+<fieldset>
+  <legend>{{ legendText }}</legend>
+  <label for="name">Tariff name</label>
+  <input id="name" name="tariff-name" type="text" />
+  <br /><br />
+  <ng-content></ng-content>
+  <br /><br />
+  <common-button (onclick)="createTariff()">Create</common-button>
+  {{ createdTariff }}
+</fieldset>

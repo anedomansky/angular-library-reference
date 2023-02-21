@@ -5,9 +5,14 @@
   "projects": {
     "@anedomansky/ngx-product-components": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/anedomansky/ngx-product-components",
       "sourceRoot": "projects/anedomansky/ngx-product-components/src",
-      "prefix": "lib",
+      "prefix": "product",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -28,10 +33,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/anedomansky/ngx-product-components/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
@@ -50,21 +52,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "preserveSymlinks": true, // needed for ERROR TypeError: Cannot read properties of null (reading 'bindingStartIndex')
             "outputPath": "dist/ngx-product-test-app",
             "index": "projects/ngx-product-test-app/src/index.html",
             "main": "projects/ngx-product-test-app/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/ngx-product-test-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/ngx-product-test-app/src/favicon.ico",
               "projects/ngx-product-test-app/src/assets"
             ],
-            "styles": [
-              "projects/ngx-product-test-app/src/styles.scss"
-            ],
+            "styles": ["projects/ngx-product-test-app/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -115,19 +114,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/ngx-product-test-app/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/ngx-product-test-app/src/favicon.ico",
               "projects/ngx-product-test-app/src/assets"
             ],
-            "styles": [
-              "projects/ngx-product-test-app/src/styles.scss"
-            ],
+            "styles": ["projects/ngx-product-test-app/src/styles.scss"],
             "scripts": []
           }
         }
