@@ -1,0 +1,14 @@
+{
+  "extends": "@anedomansky/tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist"
+  },
+  "include": [
+    "./src/**/*.ts",
+    "src/**/*.json",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "./src/**/*.spec.ts"
+  ]
+}
