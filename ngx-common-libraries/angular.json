@@ -60,7 +60,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/ngx-common-test-app/src/favicon.ico",
-              "projects/ngx-common-test-app/src/assets"
+              "projects/ngx-common-test-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/anedomansky/ngx-common-components/assets",
+                "output": "/assets/"
+              }
             ],
             "styles": ["projects/ngx-common-test-app/src/styles.scss"],
             "scripts": []
