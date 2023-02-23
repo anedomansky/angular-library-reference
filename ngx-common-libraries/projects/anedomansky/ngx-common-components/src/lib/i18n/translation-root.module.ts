@@ -2,16 +2,17 @@ import { APP_INITIALIZER, isDevMode, NgModule } from '@angular/core';
 import {
   translocoConfig,
   TranslocoModule,
-  TranslocoService,
   TRANSLOCO_CONFIG,
   TRANSLOCO_LOADER,
 } from '@ngneat/transloco';
 import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
+import { NgxCommonTranslationService } from './ngx-common-translation.service';
 import { TranslationHttpLoader } from './translation-http-loader';
-import { translationPreLoad } from './translation-pre-load';
+import { NgxCommonTranslationDirective } from './ngx-common-translation.directive';
 
 @NgModule({
   imports: [
+    TranslocoModule,
     TranslocoLocaleModule.forRoot({
       langToLocaleMapping: {
         en: 'en-US',
@@ -43,10 +44,12 @@ import { translationPreLoad } from './translation-pre-load';
     {
       provide: APP_INITIALIZER,
       multi: true,
-      useFactory: translationPreLoad,
-      deps: [TranslocoService],
+      useFactory: (translationService: NgxCommonTranslationService) => () =>
+        translationService.addTranslationsByPath('assets/i18n/', ['de', 'en']),
+      deps: [NgxCommonTranslationService],
     },
   ],
-  exports: [TranslocoModule],
+  exports: [NgxCommonTranslationDirective],
+  declarations: [NgxCommonTranslationDirective],
 })
 export class TranslationRootModule {}

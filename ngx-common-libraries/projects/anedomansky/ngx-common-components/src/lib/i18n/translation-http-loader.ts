@@ -12,7 +12,6 @@ export class TranslationHttpLoader implements TranslocoLoader {
     lang: string,
     data?: TranslocoLoaderData | undefined
   ): Observable<Translation> | Promise<Translation> {
-    console.log('triggered');
     return this.http.get<Translation>(`/assets/i18n/${lang}.json`);
   }
 }

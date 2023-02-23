@@ -1,8 +1,7 @@
 <fieldset>
   <ng-container *transloco="let t">
     <legend>
-      bla
-      {{ t("test") }}
+      {{ legendText ?? t("fieldset.legend.text") }}
     </legend>
   </ng-container>
   <ng-content></ng-content>

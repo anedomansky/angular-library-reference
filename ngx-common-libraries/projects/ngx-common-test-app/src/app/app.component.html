@@ -349,12 +349,12 @@
   </a>
 </div>
 
-<div class="content" role="main">
+<div class="content" role="main" *ngxCommonTranslation="let t">
   <h1>Ngx-Common-Test-App</h1>
   <common-fieldset>
-    <common-button type="button" (onclick)="increment()"
-      >Increment counter</common-button
-    >
+    <common-button type="button" (onclick)="increment()">{{
+      t("product.counter.button")
+    }}</common-button>
     Counter: {{ counter }}
   </common-fieldset>
 </div>
