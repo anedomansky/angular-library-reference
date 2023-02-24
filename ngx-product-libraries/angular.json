@@ -61,7 +61,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/ngx-product-test-app/src/favicon.ico",
-              "projects/ngx-product-test-app/src/assets"
+              "projects/ngx-product-test-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/anedomansky/ngx-product-components/assets",
+                "output": "/assets/"
+              }
             ],
             "styles": ["projects/ngx-product-test-app/src/styles.scss"],
             "scripts": []

@@ -1,0 +1,8 @@
+{
+  "product": {
+    "tariff": {
+      "button": "Create",
+      "name": "Tariff name"
+    }
+  }
+}

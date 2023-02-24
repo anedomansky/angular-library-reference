@@ -12,7 +12,6 @@ import { NgxCommonTranslationDirective } from './ngx-common-translation.directiv
 
 @NgModule({
   imports: [
-    TranslocoModule,
     TranslocoLocaleModule.forRoot({
       langToLocaleMapping: {
         en: 'en-US',
@@ -49,7 +48,7 @@ import { NgxCommonTranslationDirective } from './ngx-common-translation.directiv
       deps: [NgxCommonTranslationService],
     },
   ],
-  exports: [NgxCommonTranslationDirective],
+  exports: [NgxCommonTranslationDirective, TranslocoModule],
   declarations: [NgxCommonTranslationDirective],
 })
 export class TranslationRootModule {}

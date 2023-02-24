@@ -1,10 +1,11 @@
-<fieldset>
-  <legend>{{ legendText }}</legend>
-  <label for="name">Tariff name</label>
+<common-fieldset [legendText]="legendText" *ngxCommonTranslation="let t">
+  <label for="name">{{ t("product.tariff.name") }}</label>
   <input id="name" name="tariff-name" type="text" />
   <br /><br />
   <ng-content></ng-content>
   <br /><br />
-  <common-button (onclick)="createTariff()">Create</common-button>
+  <common-button (onclick)="createTariff()">{{
+    t("product.tariff.button")
+  }}</common-button>
   {{ createdTariff }}
-</fieldset>
+</common-fieldset>
