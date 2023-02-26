@@ -3,12 +3,10 @@ import {
   translocoConfig,
   TranslocoModule,
   TRANSLOCO_CONFIG,
-  TRANSLOCO_LOADER,
 } from '@ngneat/transloco';
 import { TranslocoLocaleModule } from '@ngneat/transloco-locale';
-import { NgxCommonTranslationService } from './ngx-common-translation.service';
-import { TranslationHttpLoader } from './translation-http-loader';
 import { NgxCommonTranslationDirective } from './ngx-common-translation.directive';
+import { NgxCommonTranslationService } from './ngx-common-translation.service';
 
 @NgModule({
   imports: [
@@ -37,14 +35,13 @@ import { NgxCommonTranslationDirective } from './ngx-common-translation.directiv
       }),
     },
     {
-      provide: TRANSLOCO_LOADER,
-      useClass: TranslationHttpLoader,
-    },
-    {
       provide: APP_INITIALIZER,
       multi: true,
       useFactory: (translationService: NgxCommonTranslationService) => () =>
-        translationService.addTranslationsByPath('assets/i18n/', ['de', 'en']),
+        translationService.addTranslationsByPath('assets/common-i18n/', [
+          'de',
+          'en',
+        ]),
       deps: [NgxCommonTranslationService],
     },
   ],

@@ -1,0 +1,12 @@
+{
+  "product": {
+    "tariff": {
+      "name": "Name des Tarifs"
+    }
+  },
+  "customer": {
+    "tariff": {
+      "price": "Preis des Tarifs"
+    }
+  }
+}

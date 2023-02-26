@@ -70,6 +70,4 @@ TariffCreate
 
 ### TODO
 
-- Build example component
-- Translation with "@ngneat/transloco" and "@ngneat/transloco-locale" and overwrite/add translations
 - Overwrite/extend InjectionToken for loader/adapter

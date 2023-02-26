@@ -14,7 +14,10 @@ import {
     {
       provide: APP_INITIALIZER,
       useFactory: (translationService: NgxCommonTranslationService) => () =>
-        translationService.addTranslationsByPath('assets/i18n/', ['de', 'en']),
+        translationService.addTranslationsByPath('assets/product-i18n/', [
+          'de',
+          'en',
+        ]),
       deps: [NgxCommonTranslationService],
       multi: true,
     },

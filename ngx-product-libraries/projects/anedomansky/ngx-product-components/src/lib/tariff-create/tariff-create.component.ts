@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class TariffCreateComponent {
   @Input()
-  legendText = 'New Tariff';
+  legendText?: string;
 
   createdTariff: string;
 

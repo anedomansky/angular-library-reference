@@ -1,0 +1,12 @@
+{
+  "product": {
+    "tariff": {
+      "name": "Name of the tariff"
+    }
+  },
+  "customer": {
+    "tariff": {
+      "price": "Price of the tariff"
+    }
+  }
+}

@@ -66,6 +66,11 @@
                 "glob": "**/*",
                 "input": "projects/anedomansky/ngx-product-components/assets",
                 "output": "/assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@anedomansky/ngx-common-components/assets",
+                "output": "/assets/"
               }
             ],
             "styles": ["projects/ngx-product-test-app/src/styles.scss"],
