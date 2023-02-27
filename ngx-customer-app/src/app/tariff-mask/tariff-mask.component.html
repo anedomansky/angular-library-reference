@@ -1,4 +1,12 @@
-<product-tariff-create *ngxCommonTranslation="let t">
+<product-tariff-create
+  *ngxCommonTranslation="let t"
+  [createTariffButtonConfig]="createBtnConfig"
+>
   <label for="price">{{ t("customer.tariff.price") }}</label>
-  <input id="price" name="tariff-price" type="number" />
+  <input
+    id="price"
+    name="tariff-price"
+    type="number"
+    [disabled]="tariffPriceConfig.disabled"
+  />
 </product-tariff-create>

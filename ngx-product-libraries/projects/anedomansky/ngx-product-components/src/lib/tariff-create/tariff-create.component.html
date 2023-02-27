@@ -1,11 +1,18 @@
 <common-fieldset [legendText]="legendText" *ngxCommonTranslation="let t">
   <label for="name">{{ t("product.tariff.name") }}</label>
-  <input id="name" name="tariff-name" type="text" />
+  <input
+    id="name"
+    name="tariff-name"
+    type="text"
+    [disabled]="tariffNameInputConfig?.disabled"
+  />
   <br /><br />
   <ng-content></ng-content>
   <br /><br />
-  <common-button (onclick)="createTariff()">{{
-    t("product.tariff.button")
-  }}</common-button>
+  <common-button
+    (onclick)="createTariff()"
+    [config]="createTariffButtonConfig"
+    >{{ t("product.tariff.button") }}</common-button
+  >
   {{ createdTariff }}
 </common-fieldset>

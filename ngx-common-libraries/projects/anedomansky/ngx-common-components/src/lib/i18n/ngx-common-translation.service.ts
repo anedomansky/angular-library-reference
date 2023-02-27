@@ -78,7 +78,6 @@ export class NgxCommonTranslationService {
    * setTranslation({ ... }, 'todos/en')
    */
   setTranslation(translation: Translation, language?: string): void {
-    console.log('setTranslation: ', translation, language);
     this.translateService.setTranslation(translation, language, {
       merge: true,
     });

@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import {
+  AppConfigurationToken,
+  APP_CONFIGURATION,
+} from '@anedomansky/ngx-common-components';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +14,9 @@ export class AppComponent {
 
   counter: number;
 
-  constructor() {
+  constructor(
+    @Inject(APP_CONFIGURATION) public appConfig: AppConfigurationToken
+  ) {
     this.counter = 0;
   }
 

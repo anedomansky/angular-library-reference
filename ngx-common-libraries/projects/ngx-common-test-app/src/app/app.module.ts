@@ -8,7 +8,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NgxCommonComponentsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    NgxCommonComponentsModule.forRoot(),
+    HttpClientModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

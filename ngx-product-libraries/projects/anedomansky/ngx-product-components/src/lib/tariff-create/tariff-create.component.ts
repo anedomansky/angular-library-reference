@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ComponentConfiguration } from '@anedomansky/ngx-common-components';
 
 @Component({
   selector: 'product-tariff-create',
@@ -6,6 +7,16 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./tariff-create.component.scss'],
 })
 export class TariffCreateComponent {
+  @Input()
+  createTariffButtonConfig: ComponentConfiguration = {
+    disabled: true,
+  };
+
+  @Input()
+  tariffNameInputConfig?: ComponentConfiguration = {
+    disabled: false,
+  };
+
   @Input()
   legendText?: string;
 
