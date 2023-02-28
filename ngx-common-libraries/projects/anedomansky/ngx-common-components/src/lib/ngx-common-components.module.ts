@@ -24,10 +24,8 @@ export class NgxCommonComponentsModule {
         {
           provide: APP_CONFIGURATION,
           useValue: {
-            config: {
-              ...defaultAppConfig,
-              ...override,
-            },
+            ...defaultAppConfig,
+            ...override,
           },
         },
       ],

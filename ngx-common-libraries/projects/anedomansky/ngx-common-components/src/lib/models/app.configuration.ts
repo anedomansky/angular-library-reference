@@ -12,9 +12,7 @@ export interface AppConfiguration {
   appTitle: string;
 }
 
-export interface AppConfigurationToken {
-  config: AppConfiguration;
-}
+export type AppConfigurationToken = AppConfiguration;
 
 export const defaultAppConfig: AppConfiguration = {
   appTitle: 'Ngx-Common-Test-App',

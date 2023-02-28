@@ -1,0 +1,17 @@
+.btn {
+  &--composite {
+    background-color: lightblue;
+  }
+
+  &--life {
+    background-color: lightcoral;
+  }
+
+  &--health {
+    background-color: lightgreen;
+  }
+
+  &--general {
+    background-color: grey;
+  }
+}

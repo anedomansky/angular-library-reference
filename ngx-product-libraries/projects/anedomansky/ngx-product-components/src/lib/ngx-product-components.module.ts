@@ -1,14 +1,19 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
 import { TariffCreateComponent } from './tariff-create/tariff-create.component';
 
 import {
+  APP_CONFIGURATION,
   NgxCommonComponentsModule,
   NgxCommonTranslationService,
 } from '@anedomansky/ngx-common-components';
+import {
+  defaultProductConfig,
+  ProductConfiguration,
+} from './models/product.configuration';
 
 @NgModule({
   declarations: [TariffCreateComponent],
-  imports: [NgxCommonComponentsModule],
+  imports: [NgxCommonComponentsModule.forRoot()],
   exports: [TariffCreateComponent],
   providers: [
     {
@@ -21,6 +26,27 @@ import {
       deps: [NgxCommonTranslationService],
       multi: true,
     },
+    {
+      provide: APP_CONFIGURATION,
+      useValue: defaultProductConfig,
+    },
   ],
 })
-export class NgxProductComponentsModule {}
+export class NgxProductComponentsModule {
+  static forRoot(
+    override: Partial<ProductConfiguration> = {}
+  ): ModuleWithProviders<NgxProductComponentsModule> {
+    return {
+      ngModule: NgxProductComponentsModule,
+      providers: [
+        {
+          provide: APP_CONFIGURATION,
+          useValue: {
+            ...defaultProductConfig,
+            ...override,
+          },
+        },
+      ],
+    };
+  }
+}

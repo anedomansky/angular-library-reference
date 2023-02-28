@@ -39,14 +39,6 @@ Fieldset
 
 ### TODO
 
-- global config
-  - productType
-    - general = grey
-    - life = red
-    - health = green
-    - composite = blue
-  - appTitle
-
 ## ngx-product-libraries
 
 "dist/anedomansky/ngx-product-components" - `npm link`
@@ -66,7 +58,6 @@ TariffCreate
 ### TODO
 
 - Add InjectionToken for loader/adapter and add test case
-- expand/overwrite global config
 
 ## ngx-customer-test-app
 
@@ -80,4 +71,3 @@ TariffCreate
 ### TODO
 
 - Overwrite/extend InjectionToken for loader/adapter
-- expand/overwrite global config

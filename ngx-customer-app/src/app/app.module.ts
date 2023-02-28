@@ -16,7 +16,9 @@ import {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxProductComponentsModule,
+    NgxProductComponentsModule.forRoot({
+      appTitle: 'Ngx-Customer-App',
+    }),
     NgxCommonComponentsModule,
   ],
   providers: [
