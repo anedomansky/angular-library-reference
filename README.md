@@ -6,21 +6,43 @@ Showcase for multiple dependent Angular library that offer extensibility and cus
 
 ### domain
 
+"dist" - `npm link`
+"dist" - `npm unlink -g`
+
 #### TODO
 
-- compile and link to apps
+#### Dependencies
+
+- "@tsconfig/node18": "^1.0.1", (devDependencies)
+- "typescript": "^4.9.5" (devDependencies)
 
 ### adapter
 
+"dist" - `npm link`
+"dist" - `npm unlink -g`
+
 #### TODO
 
-- compile and link to apps
+#### Dependencies
+
+- "@tsconfig/node18": "^1.0.1", (devDependencies)
+- "typescript": "^4.9.5" (devDependencies)
+- `npm link @anedomansky/domain`
+- `npm unlink @anedomansky/domain`
 
 ### loader
 
+"dist" - `npm link`
+"dist" - `npm unlink -g`
+
 #### TODO
 
-- compile and link to apps
+#### Dependencies
+
+- "@tsconfig/node18": "^1.0.1", (devDependencies)
+- "typescript": "^4.9.5" (devDependencies)
+- `npm link @anedomansky/domain @anedomansky/adapters`
+- `npm unlink @anedomansky/domain @anedomansky/adapters`
 
 ## ngx-common-libraries
 
@@ -52,12 +74,10 @@ TariffCreate
 
 - "@ngneat/transloco": "^4.2.2",
 - "@ngneat/transloco-locale": "^4.0.0",
-- `npm link @anedomansky/ngx-common-components`
-- `npm unlink @anedomansky/ngx-common-components`
+- `npm link @anedomansky/ngx-common-components @anedomansky/domain @anedomansky/adapters @anedomansky/loader`
+- `npm unlink @anedomansky/ngx-common-components anedomansky/domain @anedomansky/adapters @anedomansky/loader`
 
 ### TODO
-
-- Add InjectionToken for loader/adapter and add test case
 
 ## ngx-customer-test-app
 
@@ -65,8 +85,8 @@ TariffCreate
 
 - "@ngneat/transloco": "^4.2.2",
 - "@ngneat/transloco-locale": "^4.0.0",
-- `npm link @anedomansky/ngx-product-components @anedomansky/ngx-common-components`
-- `npm unlink @anedomansky/ngx-product-components @anedomansky/ngx-common-components`
+- `npm link @anedomansky/ngx-common-components @anedomansky/domain @anedomansky/adapters @anedomansky/loader`
+- `npm unlink @anedomansky/ngx-common-components anedomansky/domain @anedomansky/adapters @anedomansky/loader`
 
 ### TODO
 
