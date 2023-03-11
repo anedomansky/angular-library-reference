@@ -61,6 +61,8 @@ Fieldset
 
 ### TODO
 
+- create example ngrx logic
+
 ## ngx-product-libraries
 
 "dist/anedomansky/ngx-product-components" - `npm link`
@@ -75,9 +77,12 @@ TariffCreate
 - "@ngneat/transloco": "^4.2.2",
 - "@ngneat/transloco-locale": "^4.0.0",
 - `npm link @anedomansky/ngx-common-components @anedomansky/domain @anedomansky/adapters @anedomansky/loader`
-- `npm unlink @anedomansky/ngx-common-components anedomansky/domain @anedomansky/adapters @anedomansky/loader`
+- `npm unlink @anedomansky/ngx-common-components @anedomansky/domain @anedomansky/adapters @anedomansky/loader`
 
 ### TODO
+
+- create standalone product pages
+- build routes with standalone components from common- and product-library in test app
 
 ## ngx-customer-test-app
 
@@ -86,8 +91,10 @@ TariffCreate
 - "@ngneat/transloco": "^4.2.2",
 - "@ngneat/transloco-locale": "^4.0.0",
 - `npm link @anedomansky/ngx-common-components @anedomansky/domain @anedomansky/adapters @anedomansky/loader`
-- `npm unlink @anedomansky/ngx-common-components anedomansky/domain @anedomansky/adapters @anedomansky/loader`
+- `npm unlink @anedomansky/ngx-common-components @anedomansky/domain @anedomansky/adapters @anedomansky/loader`
 
 ### TODO
 
 - Overwrite/extend InjectionToken for loader/adapter
+- wrap existing standalone page components in customer standalone page components
+- create example routing with https://angular.io/guide/standalone-components#lazy-loading-many-routes-at-once

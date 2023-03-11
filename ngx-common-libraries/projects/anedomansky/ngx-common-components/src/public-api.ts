@@ -10,3 +10,4 @@ export * from './lib/i18n/ngx-common-translation.service';
 export * from './lib/i18n/ngx-common-translation.directive';
 export * from './lib/models/component.configuration';
 export * from './lib/models/app.configuration';
+export * from './lib/error-page/error-page.component';

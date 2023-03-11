@@ -8,11 +8,17 @@ import {
   APP_CONFIGURATION,
   defaultAppConfig,
 } from './models/app.configuration';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [ButtonComponent, FieldsetComponent],
-  imports: [HttpClientModule, TranslationRootModule],
-  exports: [ButtonComponent, FieldsetComponent, TranslationRootModule],
+  imports: [HttpClientModule, TranslationRootModule, ErrorPageComponent],
+  exports: [
+    ButtonComponent,
+    FieldsetComponent,
+    TranslationRootModule,
+    ErrorPageComponent,
+  ],
 })
 export class NgxCommonComponentsModule {
   static forRoot(
