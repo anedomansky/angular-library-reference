@@ -1,10 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { ComponentConfiguration } from '@anedomansky/ngx-common-components';
+import { NgxCommonComponentsModule } from '@anedomansky/ngx-common-components';
 
 @Component({
   selector: 'product-tariff-create',
   templateUrl: './tariff-create.component.html',
   styleUrls: ['./tariff-create.component.scss'],
+  standalone: true,
+  imports: [NgxCommonComponentsModule],
 })
 export class TariffCreateComponent {
   @Input()

@@ -10,11 +10,15 @@ import {
   defaultProductConfig,
   ProductConfiguration,
 } from './models/product.configuration';
+import { TariffPageComponent } from './tariff-page/tariff-page.component';
 
 @NgModule({
-  declarations: [TariffCreateComponent],
-  imports: [NgxCommonComponentsModule.forRoot()],
-  exports: [TariffCreateComponent],
+  imports: [
+    NgxCommonComponentsModule.forRoot(),
+    TariffCreateComponent,
+    TariffPageComponent,
+  ],
+  exports: [TariffCreateComponent, TariffPageComponent],
   providers: [
     {
       provide: APP_INITIALIZER,
