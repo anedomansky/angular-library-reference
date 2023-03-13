@@ -61,8 +61,6 @@ Fieldset
 
 ### TODO
 
-- create example ngrx logic
-
 ## ngx-product-libraries
 
 "dist/anedomansky/ngx-product-components" - `npm link`
